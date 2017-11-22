@@ -15,6 +15,7 @@ namespace TelerikAcademyFundamentals
             var list = input.Split(' ').Select(Int64.Parse).ToList();
             BigInteger sum = 0;
             int index = 1;
+            Console.WriteLine("changes");
             while (index < list.Count())
             {
                 long current = list[index];
