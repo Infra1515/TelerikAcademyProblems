@@ -16,6 +16,7 @@ namespace TelerikAcademyFundamentals
             BigInteger sum = 0;
             int index = 1;
             Console.WriteLine("changes");
+            Console.WriteLine("second change");
             while (index < list.Count())
             {
                 long current = list[index];
