@@ -1,5 +1,4 @@
 ﻿using Cosmetics.Contracts;
-using Bytes2you.Validation;
 using System;
 using System.Collections.Generic;
 using System.Linq;

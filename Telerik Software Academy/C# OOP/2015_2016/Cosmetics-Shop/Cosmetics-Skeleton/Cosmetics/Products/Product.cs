@@ -5,7 +5,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Cosmetics.Common;
-using Bytes2you.Validation;
 
 namespace Cosmetics.Products
 {
@@ -31,9 +30,6 @@ namespace Cosmetics.Products
             }
             set
             {
-                Guard.WhenArgument(value, "name is null")
-                    .IsNull()
-                    .Throw();
                 if(value.Length < 3 || value.Length > 10)
                 {
                     throw new Exception("Product name must be between 3 and 10 symbols long!");
@@ -54,9 +50,6 @@ namespace Cosmetics.Products
             }
             set
             {
-                Guard.WhenArgument(value, "brand is null")
-                .IsNull()
-                .Throw();
                 if (value.Length < 2 || value.Length > 10)
                 {
                     throw new Exception("Brand name must be between 3 and 10 symbols long!");
@@ -78,9 +71,6 @@ namespace Cosmetics.Products
             }
             set
             {
-                Guard.WhenArgument(Price, "Price is less then 0")
-                    .IsLessThan(0)
-                    .Throw();
                 this.price = value;
             }
         }
@@ -88,8 +78,7 @@ namespace Cosmetics.Products
         public GenderType Gender { get; set; }
         public virtual string Print()
         {
-            //return $" -{this.Name} - {this.Brand}\r\n * Price: ${this.Price}\r\n * Gender: {this.Gender}\r\n ===";
-            throw new NotImplementedException();
+            return $"- {this.Brand} - {this.Name}:\r\n * Price: ${this.Price}\r\n * For gender: {this.Gender}\r\n ";
         }
     }
 }

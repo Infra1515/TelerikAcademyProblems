@@ -5,7 +5,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Cosmetics.Common;
-using Bytes2you.Validation;
 
 namespace Cosmetics.Products
 {
@@ -26,8 +25,7 @@ namespace Cosmetics.Products
 
         public override string  Print()
         {
-            return $"- {this.Brand} - {this.Name}:\r\n * Price: ${this.Price}\r\n * For gender: {this.Gender}\r\n " +
-                $"* Quantity: {this.Milliliters} ml\r\n * Usage: {this.Usage}";
+            return base.Print() + $"* Quantity: {this.Milliliters} ml\r\n * Usage: {this.Usage}";
         }
     }
 }

@@ -1,5 +1,4 @@
-﻿using Bytes2you.Validation;
-using Cosmetics.Common;
+﻿using Cosmetics.Common;
 using Cosmetics.Contracts;
 using System;
 
@@ -27,7 +26,6 @@ namespace Cosmetics.Products
             }
             set
             {
-                Guard.WhenArgument(value, "ingredients is null").IsNull().Throw();
                 var ingrList = value.Split(',');
                 foreach(string s in ingrList)
                 {
@@ -42,8 +40,7 @@ namespace Cosmetics.Products
 
         public override string Print()
         {
-            return $"- {this.Brand} - {this.Name}:\r\n * Price: ${this.Price}\r\n * For gender: {this.Gender}\r\n " +
-                $"* Ingredients: {this.Ingredients}";
+            return base.Print() + $"* Ingredients: {this.Ingredients}";
         }
     }
 }
