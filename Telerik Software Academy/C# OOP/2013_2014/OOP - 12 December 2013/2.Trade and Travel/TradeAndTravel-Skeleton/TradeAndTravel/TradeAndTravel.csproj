@@ -43,8 +43,15 @@
   <ItemGroup>
     <Compile Include="Armor.cs" />
     <Compile Include="Engine.cs" />
+    <Compile Include="Extended\Items\Iron.cs" />
+    <Compile Include="Extended\Items\Weapon.cs" />
+    <Compile Include="Extended\Items\Wood.cs" />
+    <Compile Include="Extended\Locations\Forest.cs" />
+    <Compile Include="Extended\Locations\Mine.cs" />
+    <Compile Include="Extended\Roles\Merchant.cs" />
     <Compile Include="IGatheringLocation.cs" />
     <Compile Include="InteractionManager.cs" />
+    <Compile Include="Extended\InteractionManagerExtended.cs" />
     <Compile Include="IShopkeeper.cs" />
     <Compile Include="Item.cs" />
     <Compile Include="ItemType.cs" />
@@ -63,6 +70,7 @@
     <None Include="App.config" />
     <None Include="TradeAndTravelDiagram.cd" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
