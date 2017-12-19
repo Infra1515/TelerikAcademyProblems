@@ -128,19 +128,9 @@ namespace Dealership.Models
             s = $"--USER {this.Username}--\r\n";
             for(int i = 0; i < this.Vehicles.Count; i++)
             {
-                if(this.Vehicles[i] is Car car)
-                {
-                    s += $"{count.ToString()}. {car.ToString()}";
-                }
-                else if(this.Vehicles[i] is Motorcycle motor)
-                {
-                    s += $"{count.ToString()}. {motor.ToString()}";
-                }
-                else if(this.Vehicles[i] is Truck truck)
-                {
-                    s += $"{count.ToString()}. {truck.ToString()}";
-                }
-
+                // no need to check for class type - the compilator 
+                // knows which ToString() method to call
+                s += $"{count.ToString()}. {vehicles.ToString()}";
                 if (this.Vehicles[i].Comments.Count == 0)
                 {
                     s += $"    --NO COMMENTS--\r\n";

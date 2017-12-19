@@ -66,6 +66,7 @@ namespace TradeAndTravel
 
         private void HandleTravelInteraction(string[] commandWords, Person actor)
         {
+            // what does this mean?
             var traveller = actor as ITraveller;
             if (traveller != null)
             {

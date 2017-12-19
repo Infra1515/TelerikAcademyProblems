@@ -47,7 +47,6 @@ namespace TradeAndTravel.Extended
             }
             return location;
         }
-
         protected override Person CreatePerson(string personTypeString, string personNameString, 
             Location personLocation)
         {
@@ -131,20 +130,3 @@ namespace TradeAndTravel.Extended
 }
 
 
-
-//private void HandleTravelInteraction(string[] commandWords, Person actor)
-//{
-//    var traveller = actor as ITraveller;
-//    if (traveller != null)
-//    {
-//        var targetLocation = this.locationByName[commandWords[2]];
-//        peopleByLocation[traveller.Location].Remove(actor);
-//        traveller.TravelTo(targetLocation);
-//        peopleByLocation[traveller.Location].Add(actor);
-
-//        foreach (var item in actor.ListInventory())
-//        {
-//            item.UpdateWithInteraction("travel");
-//        }
-//    }
-//}
