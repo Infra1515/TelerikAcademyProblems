@@ -8,7 +8,7 @@ namespace ExtMethodsAndOtherHomeWork.Extensions
 {
     public static class IEnumerableExtensions
     {
-        public static T Sum<T>(this IEnumerable<T> enumerable)
+        public static T MySum<T>(this IEnumerable<T> enumerable)
         {
             dynamic sum = 0;
             foreach (T item in enumerable)
@@ -18,7 +18,7 @@ namespace ExtMethodsAndOtherHomeWork.Extensions
             return sum;
         }
 
-        public static T ProductExt<T>(this IEnumerable<T> enumerable)
+        public static T MyProductExt<T>(this IEnumerable<T> enumerable)
         {
             dynamic product = 1;
             foreach(T item in enumerable)
@@ -28,17 +28,17 @@ namespace ExtMethodsAndOtherHomeWork.Extensions
             return product;
         }
 
-        public static T MinExt<T>(this IEnumerable<T> enumerable)
+        public static T MyMinExt<T>(this IEnumerable<T> enumerable)
         {
             return enumerable.Min();
         }
 
-        public static T MaxExt<T>(this IEnumerable<T> enumerable)
+        public static T MyMaxExt<T>(this IEnumerable<T> enumerable)
         {
             return enumerable.Max();
         }
 
-        public static T Average<T>(this IEnumerable<T> enumerable)
+        public static T MyAverage<T>(this IEnumerable<T> enumerable)
         {
             dynamic average = 0;
 
