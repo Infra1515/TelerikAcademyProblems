@@ -77,7 +77,6 @@ namespace TradeAndTravel.Extended
                     break;
             }
         }
-
         protected void HandleCraftInterraction(string[] commandWords, Person actor)
         {
             if(actor.ListInventory().Count != 0)
