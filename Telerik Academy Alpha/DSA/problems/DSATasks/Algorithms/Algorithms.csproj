@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C359577A-0A5C-4C0C-8AD6-96953FA8A396}</ProjectGuid>
+    <ProjectGuid>{15FE0B78-51AD-416F-9BE8-8227A1A15CA0}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ExtMethodsAndOtherHomeWork</RootNamespace>
-    <AssemblyName>ExtMethodsAndOtherHomeWork</AssemblyName>
+    <RootNamespace>Algorithms</RootNamespace>
+    <AssemblyName>Algorithms</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="SoftUni.Wintellect.PowerCollections, Version=1.1.5733.22550, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SoftUni.Wintellect.PowerCollections.1.1.5733.22550\lib\net20\SoftUni.Wintellect.PowerCollections.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -42,17 +45,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Delegates\DelagateTest.cs" />
-    <Compile Include="Extensions\ExtensionStringBuilder.cs" />
-    <Compile Include="Extensions\IEnumerableExtensions.cs" />
-    <Compile Include="LINQ\LinqTest.cs" />
-    <Compile Include="LINQ\StudentTest.cs" />
+    <Compile Include="Djeikstra.cs" />
+    <Compile Include="GraphBFS.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Student.cs" />
+    <Compile Include="TopologicalSortGraphDFS.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DSAImplementations\DSAImplementations.csproj">
+      <Project>{512ED8FF-C5E2-4A9B-9359-67F4EB91B9B2}</Project>
+      <Name>DSAImplementations</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
