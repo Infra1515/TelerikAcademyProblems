@@ -10,19 +10,19 @@ namespace DSAImplementations
 {
     public class LinkedList<T>
     {
-        public Node<T> Head { get; set; }
-        public Node<T> Current { get; set; }
+        public NodeLL<T> Head { get; set; }
+        public NodeLL<T> Current { get; set; }
         public int Size { get; private set; }
 
         public LinkedList()
         {
-            this.Head = default(Node<T>);
+            this.Head = default(NodeLL<T>);
             this.Size = 0;
         }
 
         public void AddFirst(T val)
         {
-            var node = new Node<T>(val);
+            var node = new NodeLL<T>(val);
             node.Next = this.Head;
             node.Prev = null;
             if (this.Head != null)
@@ -37,7 +37,7 @@ namespace DSAImplementations
         /// overloaded method taking a whole node
         /// </summary>
         /// <param name="node"></param>
-        public void AddFirst(Node<T> node)
+        public void AddFirst(NodeLL<T> node)
         {
             node.Next = this.Head;
             node.Prev = null;
@@ -54,7 +54,7 @@ namespace DSAImplementations
         {
             // AddLast in Constant time with Last variable
             // Is it possible?
-            var node = new Node<T>(val);
+            var node = new NodeLL<T>(val);
 
             if (this.Head == null)
             {
@@ -76,7 +76,7 @@ namespace DSAImplementations
             Size++;
         }
 
-        public Node<T> FindLast()
+        public NodeLL<T> FindLast()
         {
             var current = this.Head;
             while (current.Next != null)
@@ -87,43 +87,43 @@ namespace DSAImplementations
             return current;
         }
 
-        public void AddBefore(Node<T> node, T Val)
+        public void AddBefore(NodeLL<T> node, T Val)
         {
             if (node == null)
             {
-                Console.WriteLine("Node cannot be null!");
+                Console.WriteLine("NodeLL cannot be null!");
             }
             else
             {
-                var newNode = new Node<T>(Val);
+                var newNodeLL = new NodeLL<T>(Val);
 
-                newNode.Next = node;
-                newNode.Prev = node.Prev;
-                node.Prev = newNode;
-                if (newNode.Prev != null)
+                newNodeLL.Next = node;
+                newNodeLL.Prev = node.Prev;
+                node.Prev = newNodeLL;
+                if (newNodeLL.Prev != null)
                 {
-                    newNode.Prev.Next = newNode;  
+                    newNodeLL.Prev.Next = newNodeLL;  
                 }
             }
         }
 
-        public void AddAfter(Node<T> node, T val)
+        public void AddAfter(NodeLL<T> node, T val)
         {
             if (node == null)
             {
-                Console.WriteLine("Node cannot be null!");
+                Console.WriteLine("NodeLL cannot be null!");
             }
             else
             {
-                var newNode = new Node<T>(val);
+                var newNodeLL = new NodeLL<T>(val);
 
-                newNode.Next = node.Next;
-                node.Next = newNode;
+                newNodeLL.Next = node.Next;
+                node.Next = newNodeLL;
 
-                newNode.Prev = node;
-                if (newNode.Next != null)
+                newNodeLL.Prev = node;
+                if (newNodeLL.Next != null)
                 {
-                    newNode.Next.Prev = newNode; 
+                    newNodeLL.Next.Prev = newNodeLL; 
                 }
             }
         }
@@ -132,7 +132,7 @@ namespace DSAImplementations
         {
             var temp = this.Head;
             var isFound = false;
-            var nodeToRemove = new Node<T>(default(T));
+            var nodeToRemove = new NodeLL<T>(default(T));
             while (temp != null)
             {
                 if (temp.Value.Equals(value))
@@ -169,7 +169,7 @@ namespace DSAImplementations
             }
         }
 
-        public void RemoveByNode(Node<T> node)
+        public void RemoveByNodeLL(NodeLL<T> node)
         {
             throw new NotImplementedException();
         }
@@ -179,19 +179,19 @@ namespace DSAImplementations
         /// </summary>
         public LinkedList<T> ReverseList()
         {
-            var current = new Node<T>(this.Head);
-            Node<T> temp = null;
+            var current = new NodeLL<T>(this.Head);
+            NodeLL<T> temp = null;
             var reversedList = new LinkedList<T>();
             while (true)
             {
-                temp = new Node<T>(current);
+                temp = new NodeLL<T>(current);
                 reversedList.AddFirst(current);
                 if (temp.Next == null)
                 {
                     break;
                 }
                 // 
-                current = new Node<T>(temp.Next);
+                current = new NodeLL<T>(temp.Next);
             }
 
             return reversedList;
@@ -220,7 +220,7 @@ namespace DSAImplementations
             else
             {
                 var current = this.Head;
-                Node<T> temp = null;
+                NodeLL<T> temp = null;
                 while (current != null)
                 {
                     temp = current.Next;
@@ -255,7 +255,7 @@ namespace DSAImplementations
         }
 
         // HackerRank Print();
-        public static void Print(Node<T> head)
+        public static void Print(NodeLL<T> head)
         {
             if (head == null)
             {
@@ -273,15 +273,15 @@ namespace DSAImplementations
         }
 
         // Insert at the end - HackerRank
-        public static Node<T> Insert(Node<T> head, T x)
+        public static NodeLL<T> Insert(NodeLL<T> head, T x)
         {
             if (head == null)
             {
                 Console.WriteLine("List is empty! Add something first!");
-                return default(Node<T>);
+                return default(NodeLL<T>);
             }
 
-            var newNode = new Node<T>(x);
+            var newNodeLL = new NodeLL<T>(x);
             var current = head;
 
             while (current.Next != null)
@@ -289,28 +289,28 @@ namespace DSAImplementations
                 current = current.Next;
             }
 
-            current.Next = newNode;
-            newNode.Prev = current;
-            newNode.Next = null;
+            current.Next = newNodeLL;
+            newNodeLL.Prev = current;
+            newNodeLL.Next = null;
 
             return head;
         }
 
     }
 
-    public class Node<T>
+    public class NodeLL<T>
     {
-        public Node<T> Prev { get; set; }
-        public Node<T> Next { get; set;  }
+        public NodeLL<T> Prev { get; set; }
+        public NodeLL<T> Next { get; set;  }
         public T Value { get; set; }
 
-        public Node(T value)
+        public NodeLL(T value)
         {
             this.Value = value;
         }
 
         // copy constructor
-        public Node(Node<T> node)
+        public NodeLL(NodeLL<T> node)
         {
             this.Next = node.Next;
             this.Prev = node.Prev;

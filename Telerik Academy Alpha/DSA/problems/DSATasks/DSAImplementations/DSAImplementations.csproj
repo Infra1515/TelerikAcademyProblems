@@ -45,6 +45,7 @@
     <Compile Include="GraphAdjencyMatrix.cs" />
     <Compile Include="GraphEdgesList.cs" />
     <Compile Include="GraphSuccesorList.cs" />
+    <Compile Include="GraphV.cs" />
     <Compile Include="LinkedList.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

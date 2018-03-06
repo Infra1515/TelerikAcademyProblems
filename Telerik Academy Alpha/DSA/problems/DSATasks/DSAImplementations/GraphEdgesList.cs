@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DSAImplementations
 {
-    public class Graph<T>
+    public class Graph<Vertex>
     {
         public Graph() { }
         public Graph(IEnumerable<T> vertices, IEnumerable<Tuple<T, T>> edges)
@@ -49,5 +49,14 @@ namespace DSAImplementations
             bool hasEdge = this.AdjacencyList[u].Contains(v);
             return hasEdge;
         }
+    }
+
+    public class Vertex<T>
+    {
+        public int ParentCount { get; set; }
+
+        public bool IsVisited { get; set; }
+
+        public List<T> Childs { get; set; }
     }
 }

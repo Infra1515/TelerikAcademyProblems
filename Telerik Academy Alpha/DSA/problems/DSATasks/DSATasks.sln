@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swappings", "..\Swappings\S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithms", "Algorithms\Algorithms.csproj", "{15FE0B78-51AD-416F-9BE8-8227A1A15CA0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VillainConGFG", "..\Tasks\VillainConGFG.csproj", "{1D6A298A-C3B6-47E0-973B-8ACB7A4ECD81}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{15FE0B78-51AD-416F-9BE8-8227A1A15CA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{15FE0B78-51AD-416F-9BE8-8227A1A15CA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{15FE0B78-51AD-416F-9BE8-8227A1A15CA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D6A298A-C3B6-47E0-973B-8ACB7A4ECD81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D6A298A-C3B6-47E0-973B-8ACB7A4ECD81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D6A298A-C3B6-47E0-973B-8ACB7A4ECD81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D6A298A-C3B6-47E0-973B-8ACB7A4ECD81}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -28,7 +28,7 @@ namespace Swappings
             for (var i = 0; i < swap.Count; i++)
             {
                 // find separator node
-                var separatorNode = new Node<int>(default(int));
+                var separatorNode = new NodeLL<int>(default(int));
                 var separator = swap[i];
                 var current = numbers.Head;
                 while (current.Value != separator)
